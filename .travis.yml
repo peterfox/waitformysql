@@ -1,4 +1,16 @@
 language: go
-
 go:
-  - 1.x
+- 1.x
+deploy:
+  provider: releases
+  draft: true
+  overwrite: true
+  skip_cleanup: true
+  api_key:
+    secure: pD9/b8Kmrha2+KV8kW/tJFkBFlFJdw/6ckv2W81Mh0T9vu/KQd6G1u+4EmvUBsvJPxMcxe5okUN8CahGWJc0GdNNx55FdYhOBbpF2xJ53os2WMdAXP7SzY9c6GenlhZhGM8yGZdbgwWncnM8LzCso8yhsTtyBIz2SqrrIqyukjQdV9+wHb9RYvUiZjtgPFXb4hGeryj9OGQk4ppQ0I/Rh8Zl1lWVtvtSMbIT/EaumYRjAlXZts9EbJj0hy5i8iDkiDtA/N1NXJGd78cq+ywLiMC+uesDKW2JTKEvKFDx36leARfxLdyz4I57mLWsw6aC9iaX5tsfH495vss4szs/HekZpFUD08rGlBcjmp4BZXoLwwRCzVfwfeUFqaBm0CdJd5pwVwj49mM47N2b/uyUB4rLtYljwRoQmlNzrLgalXQMo0Ekf6mhCgLt6OXqNpXC5ObBlDtDIf25w2WyRKO3DVU52lFQy86aISVqpTTWeICGJBX9GAPeYroytwyTFzQQpNnfJwgTELw04Dml0Fm8HfktJR/d8hzmqxUT/ybrB6a++VART7iAHBtd9cuXXDB1WoWfuT6hjG1FbJu5bs3qaDrS+NR33w6lMkR7VNX3u+l5GV1JdqyfxVZ1rxr1tPSq/pYTFV8eWH7FQEtQpVojTQHZ3UK8zxc6ESiGT58bzgA=
+  file:
+    - "build/waitformysql_darwin_amd64"
+    - "build/waitformysql_linux_amd64"
+    - "build/waitformysql_windows_amd64.exe"
+  on:
+    repo: peterfox/waitformysql
